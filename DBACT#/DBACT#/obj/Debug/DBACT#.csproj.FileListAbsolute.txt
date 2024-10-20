@@ -1,0 +1,17 @@
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.csproj.AssemblyReference.cache
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.frmAdd.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.frmDelete.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.frmLogIn.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.frmMain.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.frmUpdate.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT_.Properties.Resources.resources
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.csproj.GenerateResource.cache
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.csproj.CoreCompileInputs.cache
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\bin\Debug\DBACT#.exe.config
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\bin\Debug\DBACT#.exe
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\bin\Debug\DBACT#.pdb
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\bin\Debug\System.Data.OleDb.dll
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\bin\Debug\System.Data.OleDb.xml
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.csproj.Up2Date
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.exe
+C:\Users\Cola\Documents\045-RCRAMOS\DBACT#\DBACT#\obj\Debug\DBACT#.pdb
