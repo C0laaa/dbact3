@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +15,11 @@ namespace DBACT_
     {
         string _username;
         OleDbConnection _conn;
-        
-        public frmMain(string username,OleDbConnection conn)
+
+        public frmMain(string username, OleDbConnection conn)
         {
             InitializeComponent();
-             _username = username;
+            _username = username;
             _conn = conn;
         }
 
@@ -38,7 +38,7 @@ namespace DBACT_
             {
                 MessageBox.Show("Please Select your Gender", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else 
+            else
             {
                 DataTable dt = new DataTable();
                 if (cboGender.SelectedIndex == 0)
@@ -77,23 +77,10 @@ namespace DBACT_
         {
             DataTable dt = new DataTable();
 
-            if(cboGender.SelectedIndex == 0)
-            { 
-             string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee ";
-                if (_conn.State != ConnectionState.Open)
-                {
-                    _conn.Open();
-                }
-                OleDbDataAdapter adapter = new OleDbDataAdapter(query, _conn);
-                adapter.Fill(dt);
-
-                _conn.Close();
-
-                grdData.DataSource = dt;
-            }
-            if (cboGender.SelectedIndex == 1 || cboGender.SelectedIndex == 2 )
+            if (cboGender.SelectedIndex >= 0)
             {
-                string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee WHERE name like '%" + txtKeyword.Text + "%' and sex ='" + cboGender.Text + "' "; if (_conn.State != ConnectionState.Open)
+                string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee WHERE name like '%" + txtKeyword.Text + "%' and sex ='" + cboGender.Text + "' "; 
+                if (_conn.State != ConnectionState.Open)
                 {
                     _conn.Open();
                 }
@@ -122,8 +109,56 @@ namespace DBACT_
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            frmDelete frm = new frmDelete(_conn); 
+            frmDelete frm = new frmDelete(_conn);
             frm.ShowDialog();
+        }
+
+        private void cboGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            if (cboGender.SelectedIndex == 0)
+            {
+                string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee ";
+                if (_conn.State != ConnectionState.Open)
+                {
+                    _conn.Open();
+                }
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, _conn);
+                adapter.Fill(dt);
+
+                _conn.Close();
+
+                grdData.DataSource = dt;
+            }
+            else if (cboGender.SelectedIndex == 1)
+            {
+                string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee WHERE  sex = 'Male'"; 
+                if (_conn.State != ConnectionState.Open)
+                {
+                    _conn.Open();
+                }
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, _conn);
+                adapter.Fill(dt);
+
+                _conn.Close();
+
+                grdData.DataSource = dt;
+            }
+            else
+            {
+                string query = "SELECT name as NAME, email as EMAIL, sex as SEX, address as ADDRESS FROM employee WHERE  sex = 'Female'";
+                if (_conn.State != ConnectionState.Open)
+                {
+                    _conn.Open();
+                }
+                OleDbDataAdapter adapter = new OleDbDataAdapter(query, _conn);
+                adapter.Fill(dt);
+
+                _conn.Close();
+
+                grdData.DataSource = dt;
+            }
+
         }
     }
 }
